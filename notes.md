@@ -53,3 +53,10 @@
 *  interfaces help in shaping "models" across the application so that any developer can pick that model and conform to it when writing code
 * failing to comply with the model will cause an error at compilation time
 * we can make an interfaces fields optional with ?
+
+## Typing Variables
+* the more types that you give typescript the more robust it will become
+* the more you help typescript understand the intent of your code the more you will be fine later.
+
+## Extending Interfaces
+

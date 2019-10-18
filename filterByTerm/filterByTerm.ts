@@ -1,6 +1,5 @@
-interface ILink {
-	url: string;
-}
+import { ILink } from '../interfaces/ILink/ILink'; 
+
 function filterByTerm(input: Array<ILink>, searchTerm: string) {
 	if(!searchTerm) throw Error("searchTerm cannot be empty");
 	if(!input.length) throw Error("input cannot be empty");
@@ -10,6 +9,16 @@ function filterByTerm(input: Array<ILink>, searchTerm: string) {
 	});
 }
 
+const obj1: ILink = { url: "string1" };
+const obj2: ILink = { url: "string2" };
+const obj3: ILink = { url: "java" };
 
-console.log(filterByTerm([{url: "string1"}, {url: 'string2'}, {url: 'string3'}], 'java'));
+const arrOfLinks: Array<ILink> = [obj1, obj2, obj3];
+
+const term: string = 'java';
+
+console.log(filterByTerm(arrOfLinks, term));
+
+
+
 
