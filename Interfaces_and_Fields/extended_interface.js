@@ -5,6 +5,6 @@ var post1 = {
     id: 1,
     url: "www.valentinog.com/typescript/",
     title: "TypeScript tutorial for beginners",
-    body: "Some stuff here!"
+    body: "Some stuff here! And then some more stuff."
 };
 console.log(post1);

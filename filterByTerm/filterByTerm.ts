@@ -1,12 +1,20 @@
-import { ILink } from '../interfaces/ILink/ILink'; 
+import { ILink } from '../interfaces/interfaces'; 
 
-function filterByTerm(input: Array<ILink>, searchTerm: string) {
+type ILinks = Array<ILink>;
+
+function filterByTerm(
+	input: ILinks, 
+	searchTerm: string,
+	lookUpKey: string = 'url'
+) : ILinks {
 	if(!searchTerm) throw Error("searchTerm cannot be empty");
 	if(!input.length) throw Error("input cannot be empty");
 	const regex = new RegExp(searchTerm, 'i');
-	return input.filter(function(arrayElement) { 
-		return arrayElement.url.match(regex);
-	});
+	return input
+	.filter(function(arrayElement) { 
+		return arrayElement[lookUpKey].match(regex);
+	})
+	// .toString();
 }
 
 const obj1: ILink = { url: "string1" };
